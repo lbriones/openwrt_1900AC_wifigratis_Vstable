@@ -1,0 +1,41 @@
+
+config wifi-device 'radio0'
+	option type 'mac80211'
+	option hwmode '11g'
+	option path 'soc/soc:pcie-controller/pci0000:00/0000:00:02.0/0000:02:00.0'
+	option htmode 'HT20'
+	option country 'US'
+	option disabled '0'
+	option txpower '30'
+	option channel '11'
+
+config wifi-iface
+	option device 'radio0'
+	option network 'lan'
+	option mode 'ap'
+	option encryption 'psk'
+	option key '123456789'
+	option ssid 'CelmediaAP'
+
+config wifi-device 'radio1'
+	option type 'mac80211'
+	option channel '36'
+	option hwmode '11a'
+	option path 'soc/soc:pcie-controller/pci0000:00/0000:00:03.0/0000:03:00.0'
+	option htmode 'VHT80'
+	option disabled '1'
+	option country 'US'
+
+config wifi-iface
+	option mode 'ap'
+	option encryption 'none'
+	option device 'radio0'
+	option network 'chilli'
+	option ssid 'WifiGratis'
+
+config wifi-iface
+
+config wifi-iface
+
+config wifi-iface
+
